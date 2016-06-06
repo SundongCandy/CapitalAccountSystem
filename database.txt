@@ -1,0 +1,32 @@
+create table CapitalAccount(
+	caId int NOT NULL AUTO_INCREMENT,
+	PRIMARY KEY(caId),
+	personId int,
+	saId int,
+	loginPassword varchar(20),
+	tradePassword varchar(20),
+	userName varchar(20),
+	gender varchar(6),
+	birthday char(10),
+	country varchar(30),
+	city varchar(30),
+	telephone varchar(20),
+	availableCapital double(50, 2),
+	frozenCapital double(50, 2),
+	nextYearInterest double(50, 2),
+	recentDate char(10)
+)
+
+create table CapitalRecord(
+	crId int NOT NULL AUTO_INCREMENT,
+	PRIMARY KEY(crId),
+	caId int,
+	useTime char(19),
+	amount double(50, 2),
+	remainedCapital  double(50, 2)
+)
+
+create table administrator(
+	id int,
+	pass varchar(20)
+)
